@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MySwaggerUIServer</name>
+    </assembly>
+    <members>
+        <member name="T:MySwaggerUIServer.Controllers.UserController">
+            <summary>
+            Операции с пользователями
+            </summary>
+        </member>
+        <member name="M:MySwaggerUIServer.Controllers.UserController.GetById(System.Int32)">
+            <summary>
+            Получить пользователя по id
+            </summary>
+            <param name="id"> Уникальный номер </param>
+            <returns></returns>
+            <response code = "200"> Пользователь найден </response>
+            <response code = "404"> Пользователь не найден </response>
+        </member>
+        <member name="M:MySwaggerUIServer.Controllers.UserController.AddUser(System.String,System.Int32)">
+            <summary>
+            Добавить нового пользователя
+            </summary>
+            <param name="name"> Имя пользователя </param>
+            <param name="age"> Возраст пользователя </param>
+            <returns></returns>
+            <response code = "200"> Пользователь успешно добавлен </response>
+            <response code = "500"> Ошибка сервера </response>
+        </member>
+        <member name="M:MySwaggerUIServer.Controllers.UserController.UpdateNameById(System.Int32,System.String,System.Int32)">
+            <summary>
+            Изменить имя пользователя по id
+            </summary>
+            <param name="id"> Уникальный номер </param>
+            <param name="newName"> Новое имя пользователя </param>
+            <param name="newAge"> Новый возраст пользователя </param>
+            <returns></returns>
+            <response code = "200"> Имя пользователя успешно изменено </response>
+            <response code = "404"> Пользователь не найден </response>
+            <response code = "500"> Ошибка сервера</response>
+        </member>
+        <member name="M:MySwaggerUIServer.Controllers.UserController.DeleteUserById(System.Int32)">
+            <summary>
+            Удалить пользователя по id
+            </summary>
+            <param name="id"> Уникальный номер </param>
+            <returns></returns>
+            <response code = "200"> Пользователь успешно удален </response>
+            <response code = "404"> Пользователь не найден </response>
+        </member>
+        <member name="M:MySwaggerUIServer.Controllers.UserController.GetUsersByAge(System.Int32,System.Int32)">
+            <summary>
+            Фильтр по возрасту
+            </summary>
+            <param name="min"> Минимальный возраст </param>
+            <param name="max"> Максимальный возраст </param>
+            <returns></returns>
+        </member>
+        <member name="M:MySwaggerUIServer.Controllers.UserController.GetMoreFourNameUsers">
+            <summary>
+            Получить имена пользователей, состоящие более чем из четырех букв
+            </summary>
+            <response code = "200"> Список успешно получен </response>
+            <returns></returns>
+        </member>
+        <member name="M:MySwaggerUIServer.Services.UsersInMemoryRepository.GetUser(System.Int32)">
+            <summary>
+            Извлекаем пользователся из базы данных
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MySwaggerUIServer.Services.UsersInMemoryRepository.AddUser(System.String,System.Int32)">
+            <summary>
+            Помещаем валидного юзера в базу данных
+            </summary>
+            <param name="name"></param>
+            <param name="age"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MySwaggerUIServer.Services.UsersInMemoryRepository.PutUser(System.Int32,System.String,System.Int32)">
+            <summary>
+            Обновляем информацию о пользователе, заранее провалидировав ее
+            </summary>
+            <param name="id"></param>
+            <param name="newName"></param>
+            <param name="newAge"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MySwaggerUIServer.Services.UsersInMemoryRepository.DeleteUser(System.Int32)">
+            <summary>
+            Удаляем юзера из базы данных по id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MySwaggerUIServer.Services.UsersInMemoryRepository.GetUsersByAge(System.Int32,System.Int32)">
+            <summary>
+            Реализация фильтра по возрасту
+            </summary>
+            <param name="minAge"> Минимальный возраст </param>
+            <param name="maxAge"> Максимальный возраст </param>
+            <returns></returns>
+        </member>
+        <member name="M:MySwaggerUIServer.Services.UsersInMemoryRepository.GetMoreFourNameUsers">
+            <summary>
+            Получить имена пользователей, состоящие более чем из четырех букв
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MySwaggerUIServer.Services.UsersInMemoryRepository.Validate(System.String,System.Int32)">
+            <summary>
+            Функция валидации на стороне БД
+            </summary>
+            <param name="name"></param>
+            <param name="age"></param>
+        </member>
+    </members>
+</doc>
