@@ -14,8 +14,8 @@ namespace MySwaggerUIServer.Services
         private readonly List<User> _users;
         private readonly ILogger<UsersInMemoryRepository> _logger;
         private const int MAX_NAME_LENGTH = 30;
-        private const int MIN_AGE = 1;
-        private const int MAX_AGE = 150;
+        private const int MIN_AGE = 18;
+        private const int MAX_AGE = 130;
 
         public UsersInMemoryRepository(ILogger<UsersInMemoryRepository> logger)
         {
